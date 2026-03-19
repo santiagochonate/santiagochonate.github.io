@@ -14,200 +14,205 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #071225;
-      color: #ffffff;
-      line-height: 1.6;
+      background: #f4f4f4;
+      color: #111;
+      line-height: 1.7;
     }
 
     nav {
+      width: 100%;
+      background: #f4f4f4;
+      border-bottom: 1px solid #d9d9d9;
       position: sticky;
       top: 0;
-      background: rgba(7, 18, 37, 0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
       z-index: 1000;
     }
 
     .nav-container {
       max-width: 1100px;
       margin: auto;
-      padding: 16px 24px;
+      padding: 18px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .logo {
-      font-weight: bold;
       font-size: 20px;
-      color: #ffffff;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     .menu {
       display: flex;
-      gap: 22px;
+      gap: 18px;
       flex-wrap: wrap;
     }
 
     .menu a {
-      color: #d7e3ff;
       text-decoration: none;
+      color: #111;
       font-size: 15px;
-      transition: 0.2s;
     }
 
     .menu a:hover {
-      color: #25d366;
+      color: #0b57d0;
     }
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(180deg, #071225 0%, #0a1833 100%);
-    }
-
-    .hero-content {
-      max-width: 900px;
-    }
-
-    .hero h1 {
-      font-size: 28px;
-      color: #cbd8f0;
-      margin-bottom: 10px;
-      font-weight: normal;
-    }
-
-    .hero h2 {
-      font-size: 58px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 28px;
-      color: #c5d2ea;
-      font-size: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #25d366;
-      color: #fff;
-      text-decoration: none;
-      padding: 14px 24px;
-      border-radius: 12px;
-      font-weight: bold;
-      transition: 0.2s;
-    }
-
-    .btn:hover {
-      background: #1ebe5d;
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 80px 20px;
-    }
-
-    .container {
+    .section {
       max-width: 1100px;
       margin: auto;
+      padding: 70px 20px;
     }
 
     .section-title {
       text-align: center;
-      font-size: 36px;
+      font-size: 40px;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    .section-title span {
+      border-left: 1px solid #111;
+      border-right: 1px solid #111;
+      padding: 0 24px;
+      display: inline-block;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .about-text h2,
+    .block h2 {
+      font-size: 34px;
       margin-bottom: 18px;
     }
 
-    .section-subtitle {
-      text-align: center;
-      color: #bfd0ec;
-      max-width: 760px;
-      margin: 0 auto 40px;
-      font-size: 18px;
+    .about-text p {
+      color: #444;
+      margin-bottom: 22px;
+      max-width: 520px;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 18px;
+      border: 1px solid #111;
+      color: #111;
+      background: white;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #111;
+      color: white;
+    }
+
+    .btn-primary {
+      background: #0b57d0;
+      color: white;
+      border: 1px solid #0b57d0;
+    }
+
+    .btn-primary:hover {
+      background: #083b8c;
+      border-color: #083b8c;
+      color: white;
+    }
+
+    .photo-box {
+      display: flex;
+      justify-content: center;
+    }
+
+    .photo-box img {
+      width: 100%;
+      max-width: 330px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 1px solid #d9d9d9;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    .block {
+      margin-top: 34px;
+    }
+
+    .block ul,
+    .block ol {
+      padding-left: 22px;
+      color: #444;
+    }
+
+    .block li {
+      margin-bottom: 8px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
 
     .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
+      background: white;
+      border: 1px solid #dcdcdc;
       padding: 24px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+      border-radius: 14px;
     }
 
     .card h3 {
-      margin-bottom: 10px;
       font-size: 22px;
+      margin-bottom: 12px;
     }
 
-    .card p, .card li {
-      color: #d0dbef;
-      font-size: 16px;
-    }
-
-    .card ul {
-      padding-left: 18px;
-    }
-
+    .card p,
     .card li {
-      margin-bottom: 8px;
+      color: #444;
     }
 
-    .two-cols {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+    .contact-box {
+      background: white;
+      border: 1px solid #dcdcdc;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
     }
 
     footer {
       text-align: center;
       padding: 30px 20px 50px;
-      color: #9cb0d0;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #666;
+      font-size: 14px;
     }
 
     @media (max-width: 900px) {
-      .hero h2 {
-        font-size: 42px;
-      }
-
-      .cards,
-      .two-cols {
+      .about-grid,
+      .cards {
         grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .nav-container {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .hero h1 {
-        font-size: 22px;
-      }
-
-      .hero h2 {
-        font-size: 34px;
-      }
-
-      .hero p {
-        font-size: 17px;
       }
 
       .section-title {
+        font-size: 32px;
+      }
+
+      .about-text h2,
+      .block h2 {
         font-size: 28px;
       }
     }
@@ -219,104 +224,134 @@
     <div class="nav-container">
       <div class="logo">Santiago Chonate</div>
       <div class="menu">
-        <a href="#home">Home</a>
-        <a href="#works">Works</a>
-        <a href="#about">About me</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">@ Home</a>
+        <a href="#works">@ Works</a>
+        <a href="#about">@ About me</a>
+        <a href="#contact">@ Contact</a>
       </div>
     </div>
   </nav>
 
-  <header class="hero" id="home">
-    <div class="hero-content">
-      <h1>Hola, Soy</h1>
-      <h2>Santiago Chonate</h2>
-      <p>
+  <section class="section" id="home">
+    <h1 class="section-title"><span>@ Home</span></h1>
+    <div class="contact-box">
+      <h2 style="font-size:36px; margin-bottom: 14px;">Hola, soy Santiago Chonate</h2>
+      <p style="max-width:800px; margin:auto; color:#444;">
         Bachiller en Administración de Empresas y Negocios Internacionales.
         Busco oportunidades en clínicas, hospitales, empresas y áreas administrativas.
       </p>
-      <a class="btn" href="https://wa.me/51999999999" target="_blank">Escríbeme por WhatsApp</a>
-    </div>
-  </header>
-
-  <section id="works">
-    <div class="container">
-      <h2 class="section-title">Works</h2>
-      <p class="section-subtitle">
-        Estas son algunas áreas en las que puedo aportar valor de manera práctica y profesional.
-      </p>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Atención al cliente</h3>
-          <p>Buen trato, orientación al usuario, comunicación clara y disposición para resolver necesidades.</p>
-        </div>
-
-        <div class="card">
-          <h3>Apoyo administrativo</h3>
-          <p>Organización de tareas, documentos, seguimiento de actividades y apoyo operativo diario.</p>
-        </div>
-
-        <div class="card">
-          <h3>Ventas y coordinación</h3>
-          <p>Experiencia práctica en trato con clientes, ventas, orden y manejo de actividades comerciales.</p>
-        </div>
-      </div>
     </div>
   </section>
 
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">About me</h2>
-      <p class="section-subtitle">
-        Soy una persona responsable, con facilidad para aprender, adaptarme y trabajar en equipo.
-      </p>
+  <section class="section" id="about">
+    <h1 class="section-title"><span>@ About me</span></h1>
 
-      <div class="two-cols">
-        <div class="card">
-          <h3>Perfil</h3>
-          <p>
-            Tengo interés en desarrollarme en el área administrativa, especialmente en clínicas,
-            hospitales y empresas donde pueda aportar compromiso, orden y buena atención.
-          </p>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy bachiller en Administración de Empresas y Negocios Internacionales, con interés en desarrollarme
+          en áreas administrativas, atención al cliente, apoyo operativo y gestión de procesos.
+        </p>
+        <p>
+          También cuento con formación en Computación e Informática, lo que me permite adaptarme al uso
+          de herramientas digitales y apoyar en tareas organizativas y administrativas.
+        </p>
+        <p>
+          Me considero una persona responsable, con facilidad para aprender, trabajar en equipo
+          y brindar un trato adecuado a clientes, pacientes y usuarios.
+        </p>
+
+        <div class="button-row">
+          <a class="btn btn-primary" href="CV.pdf" target="_blank">Descargar CV</a>
+          <a class="btn" href="https://wa.me/51999999999" target="_blank">Contáctame</a>
         </div>
 
-        <div class="card">
-          <h3>Habilidades</h3>
+        <div class="block">
+          <h2>Estudios</h2>
           <ul>
-            <li>Atención al cliente</li>
-            <li>Organización de documentos</li>
-            <li>Excel básico e intermedio</li>
-            <li>Word y herramientas digitales</li>
-            <li>Trabajo en equipo</li>
+            <li>Bachiller en Administración de Empresas y Negocios Internacionales</li>
+            <li>Computación e Informática</li>
           </ul>
         </div>
+
+        <div class="block">
+          <h2>Cursos y certificaciones</h2>
+          <ul>
+            <li>Aquí vamos a poner tu curso 1</li>
+            <li>Aquí vamos a poner tu curso 2</li>
+            <li>Aquí vamos a poner tu curso 3</li>
+            <li>Aquí vamos a poner tu curso 4</li>
+            <li>Aquí vamos a poner tu curso 5</li>
+            <li>Aquí vamos a poner tu curso 6</li>
+            <li>Aquí vamos a poner tu curso 7</li>
+            <li>Aquí vamos a poner tu curso 8</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h2>Servicios / Habilidades</h2>
+          <ol>
+            <li>Atención al cliente</li>
+            <li>Apoyo administrativo</li>
+            <li>Organización de documentos</li>
+            <li>Manejo básico e intermedio de Excel</li>
+            <li>Uso de Word y herramientas digitales</li>
+            <li>Ventas y trato con personas</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="photo-box">
+        <img src="foto.jpg" alt="Foto de Santiago Chonate">
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-subtitle">
-        Estoy disponible para entrevistas, prácticas y oportunidades laborales.
+  <section class="section" id="works">
+    <h1 class="section-title"><span>@ Works</span></h1>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Atención al cliente</h3>
+        <p>
+          Experiencia en trato con personas, orientación al cliente y comunicación clara.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Gestión administrativa</h3>
+        <p>
+          Apoyo en organización de tareas, control documentario y procesos administrativos.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Herramientas digitales</h3>
+        <p>
+          Uso de Word, Excel y herramientas básicas de computación para el trabajo diario.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Adaptación rápida</h3>
+        <p>
+          Capacidad para aprender rápido, adaptarme a nuevos entornos y asumir responsabilidades.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h1 class="section-title"><span>@ Contact</span></h1>
+
+    <div class="contact-box">
+      <h2 style="margin-bottom: 12px;">Contacto profesional</h2>
+      <p style="max-width:700px; margin:0 auto 22px; color:#444;">
+        Estoy disponible para entrevistas, prácticas, oportunidades laborales y contacto profesional.
       </p>
-
-      <div class="two-cols">
-        <div class="card">
-          <h3>WhatsApp</h3>
-          <p>Haz clic en el botón para escribirme directamente.</p>
-          <br>
-          <a class="btn" href="https://wa.me/51924379424" target="_blank">Escríbeme por WhatsApp</a>
-        </div>
-
-        <div class="card">
-          <h3>Objetivo</h3>
-          <p>
-            Integrarme a una clínica o empresa donde pueda seguir creciendo profesionalmente
-            y aportar con responsabilidad y aprendizaje rápido.
-          </p>
-        </div>
+      <div class="button-row" style="justify-content:center;">
+        <a class="btn btn-primary" href="https://wa.me/51924379424" target="_blank">Escríbeme por WhatsApp</a>
       </div>
     </div>
   </section>
