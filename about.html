@@ -2,25 +2,26 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Santiago Chonate | About</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santiago Chonate | About me</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: "Courier New", monospace;
       color: #111;
+      line-height: 1.8;
       min-height: 100vh;
       background: url("fondo.png") no-repeat center center/cover;
       position: relative;
     }
 
-    /* CAPA BLANCA (IMPORTANTE) */
+    /* capa para suavizar el fondo */
     body::before {
       content: "";
       position: fixed;
@@ -61,25 +62,115 @@
     .section {
       max-width: 1100px;
       margin: auto;
-      padding: 50px 20px;
-      text-align: center;
+      padding: 60px 20px 80px;
     }
 
     .title {
-      font-size: 32px;
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 45px;
+      font-weight: bold;
+    }
+
+    .title span {
+      border-left: 1px solid #111;
+      border-right: 1px solid #111;
+      padding: 0 22px;
+      display: inline-block;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .about-text h2 {
+      font-size: 34px;
       margin-bottom: 20px;
     }
 
-    .text {
-      font-size: 16px;
-      color: #333;
-      max-width: 700px;
+    .about-text p {
+      color: #444;
+      margin-bottom: 20px;
+      max-width: 560px;
+      font-size: 15px;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 11px 18px;
+      border: 1px solid #111;
+      color: #111;
+      background: white;
+      transition: 0.2s ease;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #111;
+      color: white;
+    }
+
+    .btn-primary {
+      border-color: #0b57d0;
+      color: #0b57d0;
+    }
+
+    .btn-primary:hover {
+      background: #0b57d0;
+      color: white;
+    }
+
+    .photo-box img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 18px;
+      border: 1px solid #111;
+      display: block;
       margin: auto;
     }
 
+    .block {
+      margin-top: 30px;
+    }
+
+    .block h3 {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .block ul,
+    .block ol {
+      padding-left: 22px;
+      color: #444;
+      font-size: 15px;
+    }
+
+    .block li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-box {
+        order: -1;
+      }
+    }
   </style>
 </head>
-
 <body>
 
   <nav>
@@ -95,13 +186,55 @@
   </nav>
 
   <section class="section">
-    <h1 class="title">@ About me</h1>
-    <p class="text">
-      Soy estudiante de Administración de Empresas y Negocios Internacionales,
-      con formación en Computación e Informática. Me caracterizo por ser
-      responsable, organizado y con orientación al trabajo administrativo
-      y atención al cliente.
-    </p>
+    <h1 class="title"><span>@ About me</span></h1>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Soy bachiller en Administración de Empresas y Negocios Internacionales,
+          con interés en desarrollarme en áreas administrativas, atención al cliente
+          y apoyo operativo en clínicas, hospitales y empresas.
+        </p>
+        <p>
+          También cuento con formación en Computación e Informática, lo que me permite
+          adaptarme al uso de herramientas digitales y apoyar en tareas organizativas.
+        </p>
+
+        <div class="button-row">
+          <a class="btn btn-primary" href="CV.pdf" target="_blank">Descargar CV</a>
+          <a class="btn" href="contact.html">Contáctame</a>
+        </div>
+
+        <div class="block">
+          <h3>Cursos y certificaciones</h3>
+          <ul>
+            <li>Computación e Informática</li>
+            <li>Excel básico</li>
+            <li>Excel intermedio</li>
+            <li>Word</li>
+            <li>Atención al cliente</li>
+            <li>Gestión administrativa</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Servicios</h3>
+          <ol>
+            <li>Atención al cliente</li>
+            <li>Apoyo administrativo</li>
+            <li>Organización de documentos</li>
+            <li>Manejo de Excel y Word</li>
+            <li>Uso de herramientas digitales</li>
+            <li>Ventas y trato con personas</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="photo-box">
+        <img src="foto.jpg" alt="Foto de Santiago Chonate">
+      </div>
+    </div>
   </section>
 
 </body>
