@@ -15,42 +15,18 @@
 
     body {
       font-family: "Courier New", monospace;
-      color: white;
+      color: #111;
       min-height: 100vh;
-      overflow-x: hidden;
-      background:
-        repeating-linear-gradient(
-          to bottom,
-          #7a0000 0px,
-          #7a0000 2px,
-          #000 2px,
-          #000 12px
-        );
+      background: url("fondo.png") no-repeat center center/cover;
       position: relative;
     }
 
+    /* capa blanca para que se vea profesional */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background: linear-gradient(
-        160deg,
-        transparent 0%,
-        transparent 30%,
-        #000 30%,
-        #000 100%
-      );
-      z-index: -2;
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 18%;
-      width: 14px;
-      height: 100%;
-      background: #111;
+      background: rgba(255,255,255,0.88);
       z-index: -1;
     }
 
@@ -72,15 +48,15 @@
 
     .nav-container a {
       text-decoration: none;
-      color: #d9d9d9;
+      color: #111;
     }
 
     .nav-container a:hover {
-      color: #ff2a2a;
+      color: #0b57d0;
     }
 
     .separator {
-      color: #d9d9d9;
+      color: #111;
     }
 
     .hero {
@@ -100,14 +76,13 @@
       font-size: 68px;
       margin-bottom: 20px;
       line-height: 1.1;
-      color: white;
-      text-shadow: 4px 4px 0 rgba(0,0,0,0.45);
-      animation: flicker 2s infinite;
+      color: #111;
+      animation: fadeInOut 3s infinite;
     }
 
     .hero p {
       font-size: 24px;
-      color: #d0d0d0;
+      color: #333;
       margin-bottom: 16px;
     }
 
@@ -116,28 +91,22 @@
       margin-top: 24px;
       text-decoration: none;
       padding: 13px 22px;
-      border: 1px solid #d9d9d9;
-      color: white;
-      background: transparent;
+      border: 1px solid #111;
+      color: #111;
+      background: white;
       transition: 0.2s ease;
     }
 
     .btn:hover {
-      background: white;
-      color: #111;
+      background: #111;
+      color: white;
     }
 
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      10% { opacity: 0.85; }
-      20% { opacity: 1; }
-      30% { opacity: 0.35; }
-      40% { opacity: 1; }
-      50% { opacity: 0.75; }
-      60% { opacity: 1; }
-      70% { opacity: 0.25; }
-      80% { opacity: 1; }
-      90% { opacity: 0.9; }
+    /* animación suave */
+    @keyframes fadeInOut {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
     }
 
     @media (max-width: 768px) {
