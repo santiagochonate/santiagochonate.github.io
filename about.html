@@ -2,27 +2,37 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Santiago Chonate | About me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Santiago Chonate | About</title>
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: "Courier New", monospace;
-      background: #f3f3f3;
       color: #111;
-      line-height: 1.8;
+      min-height: 100vh;
+      background: url("fondo.png") no-repeat center center/cover;
+      position: relative;
+    }
+
+    /* CAPA BLANCA (IMPORTANTE) */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(255,255,255,0.55);
+      z-index: -1;
     }
 
     nav {
       width: 100%;
       border-top: 8px solid #111;
-      background: #f3f3f3;
+      background: transparent;
     }
 
     .nav-container {
@@ -51,115 +61,25 @@
     .section {
       max-width: 1100px;
       margin: auto;
-      padding: 30px 20px 50px;
+      padding: 50px 20px;
+      text-align: center;
     }
 
     .title {
-      text-align: center;
       font-size: 32px;
-      margin-bottom: 45px;
-      font-weight: bold;
-    }
-
-    .title span {
-      border-left: 1px solid #111;
-      border-right: 1px solid #111;
-      padding: 0 15px;
-      display: inline-block;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 50px;
-      align-items: start;
-    }
-
-    .about-text h2 {
-      font-size: 34px;
       margin-bottom: 20px;
     }
 
-    .about-text p {
-      color: #444;
-      margin-bottom: 20px;
-      max-width: 560px;
-      font-size: 15px;
-    }
-
-    .button-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      padding: 11px 18px;
-      border: 1px solid #111;
-      color: #111;
-      background: white;
-      transition: 0.2s ease;
-      font-size: 14px;
-    }
-
-    .btn:hover {
-      background: #111;
-      color: white;
-    }
-
-    .btn-primary {
-      border-color: #0b57d0;
-      color: #0b57d0;
-    }
-
-    .btn-primary:hover {
-      background: #0b57d0;
-      color: white;
-    }
-
-    .photo-box img {
-      width: 100%;
-      max-width: 340px;
-      border-radius: 18px;
-      border: 1px solid #111;
-      display: block;
+    .text {
+      font-size: 16px;
+      color: #333;
+      max-width: 700px;
       margin: auto;
     }
 
-    .block {
-      margin-top: 30px;
-    }
-
-    .block h3 {
-      font-size: 28px;
-      margin-bottom: 14px;
-    }
-
-    .block ul,
-    .block ol {
-      padding-left: 22px;
-      color: #444;
-      font-size: 15px;
-    }
-
-    .block li {
-      margin-bottom: 8px;
-    }
-
-    @media (max-width: 900px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .photo-box {
-        order: -1;
-      }
-    }
   </style>
 </head>
+
 <body>
 
   <nav>
@@ -175,61 +95,13 @@
   </nav>
 
   <section class="section">
-    <h1 class="title"><span>@ About me</span></h1>
-
-    <div class="about-grid">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          Estudiante del X ciclo en Administración de Empresas y Negocios Internacionales,
-          con experiencia en caja chica, operaciones administrativas y atención al cliente.
-          Cuento con conocimientos en Informatica, gestion de Redes Sociales y e-commerce.
-          Me caracterizo por ser responsable, puntual y proactivo, con interñes en  
-          desarrollarme en el sector salud.
-        </p>
-
-        <div class="button-row">
-          <a class="btn btn-primary" href="CV.pdf" target="_blank">Descargar CV</a>
-          <a class="btn" href="contact.html">Contáctame</a>
-        </div>
-
-        <div class="block">
-          <h3>Cursos y certificaciones</h3>
-          <ul>
-            <li>Ciberseguridad: Ethical Hacking (C|EH) + IA</li>
-            <li>Fundamentos de SSOMA</li>
-            <li>Asistente de Planillas y Legislación Laboral</li>
-            <li>Gestiòn de Redes Sociales Community Manager</li>
-            <li>Procedimiento para la Suscripciòn de Contrato</li>
-            <li>Ensamblaje y Mantenimiento de PC`s</li>
-            <li>Seminario Gestiòn de Alta Perfomance</li>
-            <li>Procedimiento para la Suscripciòn de Contrato</li>
-            <li>Procedimiento para la Suscripciòn de Contrato</li>
-            <li>Gestiòn de Pequeños Negocios</li>
-            <li>Atención al cliente</li>
-            <li>Gestión administrativa</li>
-            <li>Aquí puedes agregar otro curso real</li>
-            <li>Aquí puedes agregar otro curso real</li>
-          </ul>
-        </div>
-
-        <div class="block">
-          <h3>Servicios</h3>
-          <ol>
-            <li>Atención al cliente</li>
-            <li>Apoyo administrativo</li>
-            <li>Organización de documentos</li>
-            <li>Manejo de Excel y Word</li>
-            <li>Uso de herramientas digitales</li>
-            <li>Ventas y trato con personas</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="photo-box">
-        <img src="foto.jpg" alt="Foto de Santiago Chonate">
-      </div>
-    </div>
+    <h1 class="title">@ About me</h1>
+    <p class="text">
+      Soy estudiante de Administración de Empresas y Negocios Internacionales,
+      con formación en Computación e Informática. Me caracterizo por ser
+      responsable, organizado y con orientación al trabajo administrativo
+      y atención al cliente.
+    </p>
   </section>
 
 </body>
