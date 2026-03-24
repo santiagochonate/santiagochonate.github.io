@@ -21,7 +21,6 @@
       position: relative;
     }
 
-    /* 🔥 AQUÍ ESTÁ EL CAMBIO (menos blanco) */
     body::before {
       content: "";
       position: fixed;
@@ -98,8 +97,11 @@
       border-radius: 10px;
     }
 
+    /* ICONOS */
     .icon {
-      font-size: 26px;
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
     }
 
     .info-title {
@@ -158,19 +160,25 @@
 
       <div class="hero-info">
 
+        <!-- UNIVERSIDAD -->
         <div class="info-item">
-          <span class="icon">🎓</span>
+          <svg class="icon" viewBox="0 0 24 24" fill="#2563eb">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 13L3.74 9 12 4.26 20.26 9 12 16zm-6 2v2h12v-2H6z"/>
+          </svg>
           <div>
             <p class="info-title">Administración de Empresas y Negocios Internacionales</p>
-            <p class="info-text">Estudiante del X — Universidad Peruana Unión</p>
+            <p class="info-text">Estudiante del último año — Universidad Peruana Unión</p>
           </div>
         </div>
 
+        <!-- COMPUTACIÓN -->
         <div class="info-item">
-          <span class="icon">💻</span>
+          <svg class="icon" viewBox="0 0 24 24" fill="#059669">
+            <path d="M3 5h18v12H3V5zm2 2v8h14V7H5zm4 12h6v2H9v-2z"/>
+          </svg>
           <div>
             <p class="info-title">Computación e Informática</p>
-            <p class="info-text">Carrera culminada — Instituto de Educación Superior | CEPEA)</p>
+            <p class="info-text">Carrera culminada — Instituto de Educación Superior | Cepea</p>
           </div>
         </div>
 
